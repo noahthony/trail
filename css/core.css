@@ -29,10 +29,21 @@ body{
     background: var(--bg);
     color: var(--clr-text);
 }
-/* header{
-    border: 1px solid red;
+header{
+    background-image: 
+            linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0), 
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 1)), 
+                url("assets/dark-bike.jpg");
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 80vh;
+    
 
-} */
+}
 
 h1, h2, h3, h4{
     color: var(--clr-title);
@@ -42,6 +53,7 @@ h1, h2, h3, h4{
 
 .menu-bar{
     position: relative;
+    /* border-bottom: 1px solid red; */
 }
 
 .main-menu{
