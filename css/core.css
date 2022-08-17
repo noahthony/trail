@@ -1,0 +1,153 @@
+/*
+    Main css Trail bikes 
+    credits: Noah Thony
+*/
+
+/*================================
+
+        Main layout design 
+
+=================================*/
+
+/* --- variables setup --- */
+
+:root{
+    --bg: rgb(0,1,2);
+    --clr-title: #fff;
+    --clr-text: rgb(141, 141, 141);
+    --accent: red;
+}
+
+
+/* --- page layout--- */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bg);
+    color: var(--clr-text);
+}
+/* header{
+    border: 1px solid red;
+
+} */
+
+h1, h2, h3, h4{
+    color: var(--clr-title);
+}
+
+/* --- navigation bar --- */
+
+.menu-bar{
+    position: relative;
+}
+
+.main-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--bg);
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform 400ms ease-in-out;
+}
+.main-menu ul{
+    margin: 0;
+    padding: 1rem 2rem;
+    list-style: none;
+}
+.main-menu li{
+    padding: 1rem;
+    
+
+}
+
+.main-menu a{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--clr-title);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.main-menu a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: var(--accent);
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+}
+
+.main-menu a:hover{
+    color: var(--accent);
+}
+.main-menu a:hover::after{
+    transform: scale(1,1);
+}
+
+/* --- creating the toggle system --- */
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* creating the hamburger menu */
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background-color: grey;
+    height: 3px;
+    width: 2rem;
+    border-radius: 3px;
+    position: relative;
+    margin-right: 1rem;
+}
+
+/* pseudo elements display */
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+/* adding transitions and animations  */
+
+
+
