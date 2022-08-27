@@ -298,7 +298,7 @@ section{
 .cta-content button{
     background-color: var(--accent);
     height: 1.9rem;
-    border-radius: 0 1rem 0 1rem;
+    border-radius: 0 0 1rem 1rem;
     color: var(--clr-title);
     text-transform: uppercase;
     border: 1px solid #000;
