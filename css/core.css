@@ -347,18 +347,35 @@ section{
 
 .details{
     display: flex;
+    justify-content: space-around;
+}
+.details h2{
+    align-self: center;
+    transform: rotate(-90deg);
 }
 
 .details-info-row{
     display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
+/* the gap fix for safari browsers  */
+.details-info-row > * + *{
+    margin-right: 2rem;
+}
+
 .details-info{
-    width: 40%;
-    border: 1px solid #fff;
+    width: 100%;
 }
+
 .part{
     color: var(--clr-title);
     text-transform: capitalize;
+    margin-bottom: 0;
+}
+.part-desc{
+    font-size: 0.9rem;
+    margin-top: 0;
 }
 
 
